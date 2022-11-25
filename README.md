@@ -9,7 +9,7 @@ If you are using these scripts and the repository, please cite:
 
 > Finn et al., 2022. Deep learning of subgrid-scale parametrisations for 
 > short-term forecasting of sea-ice dynamics with a Maxwell-Elasto-Brittle 
-> rheology
+> rheology, to be submitted
 --------
 
 In this work, we show a proof-of-concept that deep learning can parametrise the 
