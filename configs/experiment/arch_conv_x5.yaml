@@ -1,0 +1,22 @@
+# @package _global_
+
+defaults:
+  - override /data: offline_module
+  - override /network: offline_deterministic
+  - override /network/backbone: conv
+
+exp_name: conv_x5
+
+network:
+  backbone:
+    neurons_per_layer:
+      - 32
+      - 32
+      - 64
+      - 64
+      - 128
+
+logger:
+  tags:
+    - architecture
+    - conv

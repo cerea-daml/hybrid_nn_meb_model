@@ -1,0 +1,16 @@
+# @package _global_
+
+exp_name: input_difference
+
+data:
+  input_type: "difference"
+
+network:
+  n_in_channels: 20
+
+logger:
+  tags:
+    - tricks
+    - unext
+    - input_difference
+    - target_normal

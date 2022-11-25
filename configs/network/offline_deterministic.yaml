@@ -1,0 +1,7 @@
+defaults:
+  - backbone: unext
+  - loss_func: laplace_nll
+
+_target_: src_screening.network.DeterministicOfflineModel
+lr: ${learning_rate}
+n_in_channels: 20

@@ -1,0 +1,16 @@
+# @package _global_
+
+exp_name: input_woforcing
+
+data:
+  input_type: "woforcing"
+
+network:
+  n_in_channels: 18
+
+logger:
+  tags:
+    - tricks
+    - unext
+    - input_woforcing
+    - target_normal

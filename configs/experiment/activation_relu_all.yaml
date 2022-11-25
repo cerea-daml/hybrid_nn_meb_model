@@ -1,0 +1,19 @@
+# @package _global_
+
+defaults:
+  - override /data: offline_module
+  - override /network: offline_deterministic
+  - override /network/backbone: unext
+  - override /network/loss_func: laplace_nll
+
+exp_name: relu_all
+
+network:
+  backbone:
+    activation: "torch.nn.ReLU"
+    feature_activation: "torch.nn.ReLU"
+
+logger:
+  tags:
+    - activation
+    - unext

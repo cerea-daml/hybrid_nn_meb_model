@@ -1,0 +1,4 @@
+plot_features:
+  _target_: src_screening.callbacks.PlotFeaturesCallback
+  template_path: 'data/interim/template_lr.nc'
+  n_cols: 16

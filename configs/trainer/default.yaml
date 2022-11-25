@@ -1,0 +1,8 @@
+_recursive_: true
+_target_: pytorch_lightning.Trainer
+enable_checkpointing: true
+gpus: 1
+max_epochs: 1000
+val_check_interval: 1.0
+benchmark: false
+deterministic: false

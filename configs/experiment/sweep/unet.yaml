@@ -1,0 +1,54 @@
+# @package _global_
+
+defaults:
+  - override /data: offline_module
+  - override /network: offline_deterministic
+  - override /network/backbone: unet
+  - override /hydra/sweeper: optuna
+  - override /hydra/sweeper/sampler: random
+  - override /callbacks:
+      - early_stopping
+      - learning_rate_monitor
+      - model_checkpoint
+      - rich
+      - tqdm_file
+
+exp_name: unet
+
+hydra:
+  sweeper:
+    sampler:
+      seed: 42
+    direction: minimize
+    study_name: unet_architecture
+    storage: null
+    n_trials: 200
+    n_jobs: 200
+    params:
+      network.backbone.n_features: choice(8, 16, 32, 64, 128, 256)
+      network.backbone.n_depth: range(1, 5, 1)
+      network.backbone.n_blocks: range(1, 4, 1)
+      network.backbone.kernel_size: choice(3, 5, 7, 9)
+      network.backbone.activation: choice("torch.nn.ReLU", "torch.nn.SELU", "torch.nn.GELU")
+      network.backbone.batch_norm: choice(false, true)
+      network.backbone.feature_activation: choice("none", "torch.nn.ReLU", "torch.nn.SELU", "torch.nn.GELU")
+  sweep:
+    dir: data/models/${exp_name}_sweep
+    subdir: ${hydra.job.num}
+    
+
+callbacks:
+  model_checkpoint:
+    save_top_k: 1
+
+
+logger:
+  project: "sasip_paper_01_${exp_name}_sweep"
+  entity: tobifinn
+  name: null
+  tags:
+    - architecture
+    - unet
+    - optuna
+
+sweep: true

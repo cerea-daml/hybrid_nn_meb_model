@@ -1,0 +1,9 @@
+_target_: src_screening.network.backbone.UNetBackbone
+n_features: 128
+n_depth: 1
+n_blocks: 3
+kernel_size: 3
+batch_norm: true
+activation: "torch.nn.GELU"
+feature_activation: "torch.nn.ReLU"
+cartesian_weights_path: 'data/interim/cartesian_weights_128x32.pt'

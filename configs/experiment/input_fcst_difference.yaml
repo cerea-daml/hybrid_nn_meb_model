@@ -1,0 +1,16 @@
+# @package _global_
+
+exp_name: input_fcst_difference
+
+data:
+  input_type: "fcst_difference"
+
+network:
+  n_in_channels: 20
+
+logger:
+  tags:
+    - tricks
+    - unext
+    - input_fcst_difference
+    - target_normal

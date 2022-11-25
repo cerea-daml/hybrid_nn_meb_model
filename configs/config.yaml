@@ -1,0 +1,20 @@
+defaults:
+  - training: default
+  - optimizer: adam
+  - trainer: default
+  - callbacks:
+      - model_checkpoint
+      - rich
+      - tqdm
+      - plot_predictions
+      - plot_features
+  - logger: wandb
+  - _self_
+  - data: offline_module
+  - network: offline_deterministic
+  - hydra: default
+
+exp_name: ${now:%Y-%m-%d}_${now:%H-%M-%S}
+logging_level: DEBUG
+seed: 42
+sweep: false

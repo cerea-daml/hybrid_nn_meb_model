@@ -1,0 +1,16 @@
+# @package _global_
+
+exp_name: input_initial
+
+data:
+  input_type: "initial"
+
+network:
+  n_in_channels: 10
+
+logger:
+  tags:
+    - tricks
+    - unext
+    - input_initial
+    - target_normal

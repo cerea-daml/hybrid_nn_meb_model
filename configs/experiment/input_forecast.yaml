@@ -1,0 +1,16 @@
+# @package _global_
+
+exp_name: input_forecast
+
+data:
+  input_type: "forecast"
+
+network:
+  n_in_channels: 10
+
+logger:
+  tags:
+    - tricks
+    - unext
+    - input_forecast
+    - target_normal

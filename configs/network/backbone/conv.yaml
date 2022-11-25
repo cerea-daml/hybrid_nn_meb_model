@@ -1,0 +1,17 @@
+_target_: src_screening.network.backbone.ConvBackbone
+neurons_per_layer:
+  - 32
+  - 32
+  - 64
+  - 64
+  - 128
+kernel_size:
+  - 3
+  - 3
+dilation:
+  - 6
+  - 7
+activation: "torch.nn.GELU"
+bn: true
+cartesian_weights_path: 'data/interim/cartesian_weights_128x32.pt'
+feature_activation: "torch.nn.ReLU"

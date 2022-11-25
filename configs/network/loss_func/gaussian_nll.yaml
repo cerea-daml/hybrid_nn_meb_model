@@ -1,0 +1,2 @@
+_target_: src_screening.loss_funcs.GaussianNLLLoss
+trainable: true

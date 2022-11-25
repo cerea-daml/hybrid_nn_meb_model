@@ -1,0 +1,18 @@
+# @package _global_
+
+defaults:
+  - override /data: offline_module
+  - override /network: offline_deterministic
+  - override /network/backbone: unext
+  - override /network/loss_func: gaussian_nll
+
+exp_name: gaussian_fixed
+
+network:
+  loss_func:
+    trainable: false
+
+logger:
+  tags:
+    - loss_function
+    - unext

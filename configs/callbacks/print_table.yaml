@@ -1,0 +1,2 @@
+print_table:
+  _target_: pl_bolts.callbacks.PrintTableMetricsCallback

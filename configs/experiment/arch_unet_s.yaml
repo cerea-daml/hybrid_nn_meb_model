@@ -1,0 +1,17 @@
+# @package _global_
+
+defaults:
+  - override /data: offline_module
+  - override /network: offline_deterministic
+  - override /network/backbone: unet
+
+exp_name: unet_small
+
+network:
+  backbone:
+    n_depth: 1
+
+logger:
+  tags:
+    - architecture
+    - unet

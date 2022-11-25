@@ -1,0 +1,27 @@
+name: subsinn
+channels:
+  - default
+  - pytorch
+dependencies:
+  # Required for full project functionality (dont remove)
+  - python
+  - pip
+  - pytest
+  - xarray
+  - numpy
+  - scipy
+  - dask
+  - distributed
+  - netcdf4
+  - pandas
+  - matplotlib
+  - tqdm
+  - pytorch
+  - torchvision
+  - torchaudio
+  - cudatoolkit=11.3
+  - pip:
+    - rich
+    - pytorch-lightning
+    - hydra-core
+    - wandb

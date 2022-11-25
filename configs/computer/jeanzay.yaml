@@ -1,0 +1,37 @@
+# @package _global_
+
+defaults:
+  - override /callbacks:
+        - model_checkpoint
+        - rich
+        - tqdm_file
+  - override /hydra/launcher: submitit_slurm
+
+hydra:
+  launcher:
+    timeout_min: 60
+    gpus_per_node: 1
+    tasks_per_node: 1
+    gres: "gpu:${hydra.launcher.gpus_per_node}"
+    qos: qos_gpu-t3
+    cpus_per_task: 8
+    gpus_per_task: 1
+    additional_parameters:
+      account: ${oc.env:IDRPROJ}@gpu
+      distribution: "block:block"
+      hint: nomultithread
+      time: "${hours}:00:00"
+      mail-type: FAIL
+      mail-user: tobias.finn@enpc.fr
+      signal: "SIGUSR1@120"
+    setup:
+      - "export WANDB_MODE=offline"
+      - "set -x"
+    stderr_to_stdout: true
+
+logger:
+  offline: true
+  log_model: false
+
+num_workers: 8
+hours: 8

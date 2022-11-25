@@ -1,0 +1,12 @@
+_target_: src_screening.loss_funcs.LaplaceNLLLoss
+trainable: true
+scale:
+  - 0.3069695
+  - 0.30886357
+  - 0.31131027
+  - 0.34916183
+  - 0.3756864
+  - 0.09040933
+  - 0.61706189
+  - 0.26050234
+  - 0.26326252

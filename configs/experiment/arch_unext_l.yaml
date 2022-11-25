@@ -1,0 +1,23 @@
+# @package _global_
+
+defaults:
+  - override /data: offline_module
+  - override /network: offline_deterministic
+  - override /network/backbone: unext
+
+exp_name: unext_large
+
+network:
+  backbone:
+    n_depth: 3
+
+logger:
+  tags:
+    - activation
+    - architecture
+    - resolution
+    - data
+    - input
+    - loss_function
+    - tricks
+    - unext

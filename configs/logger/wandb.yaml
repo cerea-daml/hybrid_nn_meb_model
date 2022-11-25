@@ -1,0 +1,5 @@
+_target_: pytorch_lightning.loggers.WandbLogger
+project: "sasip_paper_01_screening"
+save_dir: 'data'
+name: '${exp_name}'
+log_model: true

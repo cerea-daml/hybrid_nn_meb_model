@@ -1,0 +1,17 @@
+# @package _global_
+
+defaults:
+  - override /data: offline_module
+  - override /network: offline_deterministic
+  - override /network/backbone: unext
+
+exp_name: cartesian_32x8
+
+network:
+  backbone:
+    cartesian_weights_path: 'data/interim/cartesian_weights_32x8.pt'
+
+logger:
+  tags:
+    - resolution
+    - unext

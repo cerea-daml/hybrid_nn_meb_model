@@ -1,0 +1,5 @@
+# @package _global_
+
+batch_size: 64
+learning_rate: 3E-4
+num_workers: 8
