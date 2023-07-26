@@ -7,9 +7,9 @@ Deep learning of subgrid-scale parametrisations for sea-ice dynamic
 
 If you are using these scripts and the repository, please cite:
 
-> Finn et al., 2023. Deep learning of subgrid-scale parametrisations for 
-> short-term forecasting of sea-ice dynamics with a Maxwell-Elasto-Brittle 
-> rheology, EGUsphere [preprint], https://doi.org/10.5194/egusphere-2022-1342
+> Finn et al., 2023. Deep learning subgrid-scale parametrisations for
+> short-term forecasting of sea-ice dynamics with a Maxwell elasto-brittle rheology,
+> The Cryosphere, 17, 2965–2991, https://doi.org/10.5194/tc-17-2965-2023, 2023
 
 and to cite specific versions of the code:
 
